@@ -1,0 +1,19 @@
+venv
+source /home/estudiante1/venvs/vllms/bin/activate
+
+hugging
+huggingface-cli login
+
+nohup
+nohup ./run.sh > ../logs/salida.log 2>&1 &
+nohup ./runBot.sh > ../logs/salidaBot.log 2>&1 &
+nohup ./Full.sh > ../logs/nohup.log 2>&1 &
+
+tail -f ../logs/salida.log
+tail -f ../logs/salidaBot.log
+
+Process
+ps aux | grep Full.sh
+ps aux | grep run.sh
+ps aux | grep runBot.sh
+ps -fu estudiante1
