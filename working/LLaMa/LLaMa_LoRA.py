@@ -22,10 +22,10 @@ if tokenizer.pad_token is None:
   tokenizer.pad_token = tokenizer.eos_token
 
 # 1. Descargar y preparar los datos
-path = kagglehub.dataset_download("camiloemartinez/productos-consumo-masivo")
+path = r"C:\Dev\ProyectoDeGrado\LLaMa_LoRA_Project\dataset\oscar_dataset.xlsx"
 
 # Cargar datos
-df = pd.read_excel(os.path.join(path, "output - Kaggle.xlsx"))
+df = pd.read_excel(path)
 print(f"Dataset cargado: {df.shape[0]} filas, {df.shape[1]} columnas")
 
 selected_cols = ['prod_name_long', 'subcategory', 'tags', 'prod_unit_price']
