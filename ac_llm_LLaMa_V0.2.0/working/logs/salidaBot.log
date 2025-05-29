@@ -1,0 +1,45 @@
+nohup: no se tendrá en cuenta la entrada
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:08<00:08,  8.22s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.00s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.49s/it]
+/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/bitsandbytes/nn/modules.py:451: UserWarning: Input type into Linear4bit is torch.float16, but bnb_4bit_compute_dtype=torch.float32 (default). This will lead to slow inference or training speed.
+  warnings.warn(
+Modelo Cargado
+Responde segun el siguiente contexto: Hola
+y bienvenido a la academia del paiaguyas! Estamos a su disposicion para responderle todas sus consultas.ª?
+Todos los días a partir de 15:00 hs con excepcion de los domingos, en las horas de curso o horario de atención al estudiante. Si no estás allí, haz una cita telefónica con nosotros. Por favor, llega 20 minutos antes de tiempo. No se olvide que nuestro número de teléfono es 343 1860 ext. 2914. Llame a las horarios anteriores para un remplazo.
+Llámenos por el siguiente número: 31 717 537 y seleccione opción 2 y dirección ACADEMIA DE PAIAGUYAS. También podemos llegar hasta donde lo necesite. ¡Nos veremos! Gracias. ¿Hay alguna otra persona que está interesada en tomar cursos con usted? Además de los cursos de idioma Guarani-Ka’ena , ofrecemos cursos prácticos de idiomas de formación como inglés, español, francés e italiano. También ofrecemos una amplia variedad de cursos técnicos y profesionales, así como de educación física y deportiva. ¡Miren el listado de cursillos en nuestras páginas!
+¿Quería saber más acerca de nuestros programas? Puedes hacerlo por favor comunicandote con nosostros por este correo electrónico: acpaiacpa@gmail.com. Tenemos también un número de fax: 13
+Responde segun el siguiente contexto: Hola
+, por favor me ayude con un problema, estoy intentando crear una base de datos y alguien lo hace en Access pero como no se puede correr Access por ahora solo tengo la posibilidad de funcionar con Windows Excel. planta-15-03-2018
+Leyenda: * Venta * Salida * Requisición * Compras * Proyectos * Ventas* * Equipos * Usuarios * Procesos * Ordenes * Presupuesto * Contratos * Comentario * Notificación * Observaciones * Producto * Servicio * Personal * Inventario * Facturación * Cierre * Ajuste * Pago * Comisión * Revisión * Evaluación * Registro * Almacenamiento * Trabajo * Estudio * Mesa de trabajo * Cargo * Personalizado * Operaciones * Transacciones * Administrador * Asistente * Reclamo * Compañía * Banca * Seguridad * Comunicación * Relaciones laborales * Fianzas * Reorganización * Racionalización * Reasignación * Realimentación * Actualización * Recaudación * Complementaria * Exposición * Recursos Humanos * Documentación * Informática * Finanzas * Tecnología * Innovacion * Progreso * Gestión * Administracion * Desarrollo * Desempeño * Excelencia * Calidad * Calificacion * Valor * Meditacion * Planificacion de recursos humanos * Planificación y gestión de personal * Planification et gestion du personnel * Gerencia de recursoscapsular * Reclutamiento y seleccion de personalcapsular
+Para mejorar nuestro sitio web somos interesados en colaborar con artistas, diseñadores y
+Responde segun el siguiente contexto: Hola
+! me gustaría saber si existen productos en cuanto a la piel que ayude con los problemas de las manos, como las manchas, la escam...
+Me recomiendo que consultes el doctor o el médico especializado que te atiende. Son ellos quienes pueden guiarte para resolver el problema. Yo yo personalmente lo he intentado varias veces y siempre han sido una frustración. No hay fármacos específicos para el tratamiento de manchas y marcas que afectan las manitas, pero puedes hacer algún ejercicio de limpieza y prevención de la epidermis que esposan el cuidado del área de las muñecas y las manítas y de los brazos. Y si las marcas están causadas por otra causa, como estrés o cambios hormonales, el médicus puede indicarte la terapia adecuada. En resumen, las marcapáginas manualecían la solución a la problemática mediante el cambio de hábitos y comportamientos y no suplementos medicinales. Sin embargo, si tienes síntomas importantes o intensos relacionados con las marques manuelles, no dudes en solicitar ayuda médica. ¡Espero que te sea útil información. Un saludo!
+Hola!! me gusta mucho leer los artículos de esta plataforma. Me gustan todos los temas, excepto aquel sobre las mariposas. Porque me da miedo verlas cuando vengan. Pero me ha llegado a mí un amigo que tiene una reacción inmediata al verlas. Lo ha seguido por 2 años, cada vez más intensa, incluso hasta llegar a ser muy agresiva
+Responde segun el siguiente contexto: Hola
+, quisiera saber los nombres de los productos en ingles y español que ofrecen las empresas en la sección de "Materiales" para "Arquitectura y Edificios"
+El resultado es un listado de palabras en español y su traducción al inglés para cada una de ellas.
+Siempre estoy buscando nuevas empresas y personas interesadas en este proyecto. Espero poder hacerles llegar algunos trabajos o incluso puedan ayudarme a hacer esta página más completa. Gracias por visitar.
+Tengo una tienda de discos (Rock and roll, Blues, Jazz, Folk) llamada Rock&Blues y puedes verlo aquí:http://www.rockandblues.es . Es un sitio de comercio electrónico que vende todo tipo de música en formato físico y digital. De momento solo estoy vendiendo materiales vinilo y CD pero pronto estaré vendo descargas digitales. Sí, soy amante del blues y rock clásico, jazz y folk. Y si tienes algún disco raro o alguno que te guste, no dudes en preguntarme si lo puedo vender. Te diré lo mismo que siempre digo: que si tú eres amigo de algún lugar de mi lista, no te olvides de pasar por allí alguna vez. Un saludo.
+Traceback (most recent call last):
+  File "/home/estudiante1/workspaces/ac_llm/working/source/Test_Model.py", line 68, in <module>
+    asyncio.run(main())
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/nest_asyncio.py", line 30, in run
+    return loop.run_until_complete(task)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/usr/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/home/estudiante1/workspaces/ac_llm/working/source/Test_Model.py", line 63, in main
+    await app.run_polling()
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_application.py", line 832, in run_polling
+    return self.__run(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_application.py", line 1072, in __run
+    loop.close()
+  File "/usr/lib/python3.10/asyncio/unix_events.py", line 68, in close
+    super().close()
+  File "/usr/lib/python3.10/asyncio/selector_events.py", line 84, in close
+    raise RuntimeError("Cannot close a running event loop")
+RuntimeError: Cannot close a running event loop
