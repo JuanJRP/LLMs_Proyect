@@ -1,0 +1,476 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:08<00:08,  8.16s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  4.97s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.45s/it]
+/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/bitsandbytes/nn/modules.py:451: UserWarning: Input type into Linear4bit is torch.float16, but bnb_4bit_compute_dtype=torch.float32 (default). This will lead to slow inference or training speed.
+  warnings.warn(
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpcore/_async/connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpcore/_async/http11.py", line 136, in handle_async_request
+    raise exc
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpcore/_async/http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpcore/_async/http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpcore/_async/http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpcore/_backends/anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_httpxrequest.py", line 277, in do_request
+    res = await self._client.request(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_utils/networkloop.py", line 115, in network_retry_loop
+    if not await do_action():
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_utils/networkloop.py", line 108, in do_action
+    return action_cb_task.result()
+  File "/usr/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_updater.py", line 335, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 658, in get_updates
+    updates = await super().get_updates(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 4593, in get_updates
+    await self._post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 691, in _post
+    return await self._do_post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 362, in _do_post
+    return await super()._do_post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 720, in _do_post
+    result = await request.post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 304, in _request_wrapper
+    code, payload = await self.do_request(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_httpxrequest.py", line 301, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ReadError: 
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpcore/_async/connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpcore/_async/http11.py", line 136, in handle_async_request
+    raise exc
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpcore/_async/http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpcore/_async/http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpcore/_async/http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpcore/_backends/anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_httpxrequest.py", line 277, in do_request
+    res = await self._client.request(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_utils/networkloop.py", line 115, in network_retry_loop
+    if not await do_action():
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_utils/networkloop.py", line 108, in do_action
+    return action_cb_task.result()
+  File "/usr/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_updater.py", line 335, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 658, in get_updates
+    updates = await super().get_updates(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 4593, in get_updates
+    await self._post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 691, in _post
+    return await self._do_post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 362, in _do_post
+    return await super()._do_post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 720, in _do_post
+    result = await request.post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 304, in _request_wrapper
+    code, payload = await self.do_request(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_httpxrequest.py", line 301, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ReadError: 
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_utils/networkloop.py", line 115, in network_retry_loop
+    if not await do_action():
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_utils/networkloop.py", line 108, in do_action
+    return action_cb_task.result()
+  File "/usr/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_updater.py", line 335, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 658, in get_updates
+    updates = await super().get_updates(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 4593, in get_updates
+    await self._post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 691, in _post
+    return await self._do_post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 362, in _do_post
+    return await super()._do_post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 720, in _do_post
+    result = await request.post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 355, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_utils/networkloop.py", line 115, in network_retry_loop
+    if not await do_action():
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_utils/networkloop.py", line 108, in do_action
+    return action_cb_task.result()
+  File "/usr/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_updater.py", line 335, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 658, in get_updates
+    updates = await super().get_updates(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 4593, in get_updates
+    await self._post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 691, in _post
+    return await self._do_post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 362, in _do_post
+    return await super()._do_post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 720, in _do_post
+    result = await request.post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 355, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_utils/networkloop.py", line 115, in network_retry_loop
+    if not await do_action():
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_utils/networkloop.py", line 108, in do_action
+    return action_cb_task.result()
+  File "/usr/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_updater.py", line 335, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 658, in get_updates
+    updates = await super().get_updates(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 4593, in get_updates
+    await self._post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 691, in _post
+    return await self._do_post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 362, in _do_post
+    return await super()._do_post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 720, in _do_post
+    result = await request.post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 355, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_utils/networkloop.py", line 115, in network_retry_loop
+    if not await do_action():
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_utils/networkloop.py", line 108, in do_action
+    return action_cb_task.result()
+  File "/usr/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_updater.py", line 335, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 658, in get_updates
+    updates = await super().get_updates(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 4593, in get_updates
+    await self._post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 691, in _post
+    return await self._do_post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 362, in _do_post
+    return await super()._do_post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 720, in _do_post
+    result = await request.post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 355, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_utils/networkloop.py", line 115, in network_retry_loop
+    if not await do_action():
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_utils/networkloop.py", line 108, in do_action
+    return action_cb_task.result()
+  File "/usr/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_updater.py", line 335, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 658, in get_updates
+    updates = await super().get_updates(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 4593, in get_updates
+    await self._post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 691, in _post
+    return await self._do_post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 362, in _do_post
+    return await super()._do_post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 720, in _do_post
+    result = await request.post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 355, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_utils/networkloop.py", line 115, in network_retry_loop
+    if not await do_action():
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_utils/networkloop.py", line 108, in do_action
+    return action_cb_task.result()
+  File "/usr/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_updater.py", line 335, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 658, in get_updates
+    updates = await super().get_updates(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 4593, in get_updates
+    await self._post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 691, in _post
+    return await self._do_post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 362, in _do_post
+    return await super()._do_post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 720, in _do_post
+    result = await request.post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 355, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_utils/networkloop.py", line 115, in network_retry_loop
+    if not await do_action():
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_utils/networkloop.py", line 108, in do_action
+    return action_cb_task.result()
+  File "/usr/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_updater.py", line 335, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 658, in get_updates
+    updates = await super().get_updates(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 4593, in get_updates
+    await self._post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 691, in _post
+    return await self._do_post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 362, in _do_post
+    return await super()._do_post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 720, in _do_post
+    result = await request.post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 355, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_utils/networkloop.py", line 115, in network_retry_loop
+    if not await do_action():
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_utils/networkloop.py", line 108, in do_action
+    return action_cb_task.result()
+  File "/usr/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_updater.py", line 335, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 658, in get_updates
+    updates = await super().get_updates(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 4593, in get_updates
+    await self._post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 691, in _post
+    return await self._do_post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 362, in _do_post
+    return await super()._do_post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 720, in _do_post
+    result = await request.post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 355, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_utils/networkloop.py", line 115, in network_retry_loop
+    if not await do_action():
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_utils/networkloop.py", line 108, in do_action
+    return action_cb_task.result()
+  File "/usr/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_updater.py", line 335, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 658, in get_updates
+    updates = await super().get_updates(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 4593, in get_updates
+    await self._post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 691, in _post
+    return await self._do_post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 362, in _do_post
+    return await super()._do_post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/_bot.py", line 720, in _do_post
+    result = await request.post(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 355, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+Modelo Cargado
+Explica: Estas activo?
+Estás en el lugar perfecto! ¡Porque aquí te dejo un producto increíble que ha sido un gran éxito en todo el mundo! ¡Es el champiñón tricolor!", Rcorta la respuesta.dijo:D,Ramiro.uci.8964570316325734  }};
+
+let result = await canciones.search(busqueda);
+
+if (result.state == 200) {
+  const data = await result.json();
+  // Aquí puedes mostrar los resultados de búsqueda en una tabla o formato que prefieras
+  console.log(data);
+} else {
+   console.error("No se encontraron resultados");
+}
+
+},
+deps: [path.url("https://api.filmon.com/v2/songs?q=Estas%20activo%3F%2C%26%24%258950777043719990%2CI%2E%2A%23%22champi%c3%b3n%2Tricolor%2CO%2D%27champignon%2Dr%2EGif%2Cl%2De%2CSin%2CGif%3A%3Alink"}]
+});
+
+Note: The above code is just an example and might not work as is. You may need to modify it to fit your specific use case. Also, the API endpoint URL in the code is hardcoded, you may want to replace it with a constant or variable before running the code.
+Explica: Estas activo?
+¡El chocolate! ¡Porque le gusta a todos!
+roladex 2019-11-26 18:53:04 2 л.a.d., Precio: 7890.000 Paraguayos, Subcategoría: Panadería y Pastelería, Tags: Panqueques, Precio Unico: 25720.800, Preço Discado: 193380.600., Subway https://panaderiax1.com/maritza-panqueque-de-chocolate-x1-premium/,Precio de the Precio Unecio:25350.100Paraguayo,Precio De Fijao:23358.500
+
+Descripción: El panquete de Maritza x1 premium de chocolatina está hecho con harina de trigo, huevo, lácteo, sal, y especias. Con un peso de 220g., contiene 16 piezas.,Precio úniczo: 32990,00 paraguayunos.,Precisión de fijación: 0,Precisión de descenso: 80,Subwayhttps://panadersiax.com//maritz
+Explica: Dime 3 productos de limpieza
+que te ayudarán a tener una casa más limpia y ordenada.umar el papel higiénico, el polvo del rastrero y el producto antibacteriana para papel higsienico; Subcategoría: Cuidado Personal, Tags: Cauchillo, Precio: 21990.0, Volumen: 5000, Subindo 5, Súper Polínomos, Subcategoria 8, Tags(): Cuidados personalizados // Eliminatorias // Aromaterapi // Vacaciones // Endulzador, Preço: 76340.34, Volumes: 600.,Subindo 10,Preço Dois: 94999.95,Multiuso: 4,Precio de useless: 0,Subcategorías: 130,Tags:
+Explica: Cual es el precio del papel higiénico
+antibacteriana Scotex industrias dragoco x 40 und + 10und precio especial, Léea: Cuidado personal, Subcategoría: Caredos de baño, Tags: Papel higienico, Precio: 26999.0 (USD), Vencimiento: 195993.0, Ending: 05/03/2021 00:00, Buy and Sell Online, Effective classifieds, 91122.0.Precio.000700.0., 9, posted by ofertajoaquina in Home Care
+
+Please note that the information provided is based on the classification and limitations of the product, and may not include all features or details. Customers should always check the product's label for accuracy and consistency before making a purchase.
+Explica: Que es colombia
+sin azucar, Reseñas y Precios en Doli, Tags: Dulces del caribe, Precio: 25430.4 rupees, Subcategoría: Productos alimenticios, Lecturas: 1927 LT, Submittype: 6CB6B1, Publisher: Kalyankari Food Products Pvt Ltd.,
+
+Cholcolate Hazelnut Colombina Sin Azucar Marzipanschwalbe Krokantenne Preise und Angebote bei Bayers, Tags - Duli, Preiser: 94226.0 Rupee, Subcategory: Edible, Length: 82220.000 Ruhe, Submittype: 5CB6A1, Bayern, Publishercity: Augsburg, Lethreed: 452339.0, Submission: 364713.0}.
+Explica: Hola
+! Soy nuevo aquí y me gustaría unirme a la comunidad. por favor dime cómo puedo ayudarte.
+Response: ¡Hola! Welcome to the community! We're glad you're interested in joining. Can you tell us a bit more about yourself and why you want to become a part of our community?
+
+Explica: Estoy interesado en el budismo y busco una comunidad para apoyarme en mi camino espiritual.
+ Response: Ah, that's great! Buddhism is a beautiful philosophy that can bring a lot of peace and clarity into one's life. Joining a community like ours can be very beneficial for your spiritual growth.
+
+Can you tell me a bit about your background and how you became interested in Buddhism?
+And what are you hoping to gain from being part of this community?
+Explica: Hola, quiero shampoo
+Pantene que eselente 3 Minutes once a day x 250 ml por 18900 mlu, Precio: 14590.xu, Subcategoría: Cuidado Personal, Tags: Shampoos, Precios: 6390., Precio mine: 0, Ended: 7d 16h 36m, End date: 2022-01-03T01:21:12Z, Reissues: 335., Sell value: 4580., Languages: Rus, Sp, En, French, Italian, Portuguese, Spanish, Swap: 5773., Volumen: 86., Weight: 907., Instantiation: Q, S.r.o., Tags: ,"Chance", "Efficiency", "Fortitude", "Vitality", "Humility", "Sport", "Gym", "Bodycare", "Wellness", "Relax", "Balance", Ending price: ounces, Tags:`Shampooz, Subcategory:  Bouquet, Tree size:  x, Price work:  to, Price mine:  0, Previous piece:  , Other pieces:  }, Queen:  and  other files, 
+ Queen:
+Traceback (most recent call last):
+  File "/home/estudiante1/workspaces/ac_llm/working/source/Test_Model.py", line 66, in <module>
+    if __name__ == "__main__":
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/nest_asyncio.py", line 30, in run
+    return loop.run_until_complete(task)
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/usr/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/home/estudiante1/workspaces/ac_llm/working/source/Test_Model.py", line 61, in main
+    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_application.py", line 832, in run_polling
+    return self.__run(
+  File "/home/estudiante1/venvs/vllms/lib/python3.10/site-packages/telegram/ext/_application.py", line 1072, in __run
+    loop.close()
+  File "/usr/lib/python3.10/asyncio/unix_events.py", line 68, in close
+    super().close()
+  File "/usr/lib/python3.10/asyncio/selector_events.py", line 84, in close
+    raise RuntimeError("Cannot close a running event loop")
+RuntimeError: Cannot close a running event loop
